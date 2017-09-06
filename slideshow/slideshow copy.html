@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="slideshow.css">
+	<nav></nav>
+</head>
+<body>
+	<nav>this is the nav bar, links go <a href="slideshow2.html">here</a></nav>
+	<br>
+	<img  src="slideshow/bird.jpeg" class="mySlides">  
+
+	<img  src="slideshow/doge.jpg" class="mySlides">
+	
+	
+	<img  src="slideshow/fish.jpg" class="mySlides">
+	
+	<img  src="slideshow/kitten.jpg" class="mySlides">
+	
+	<img  src="slideshow/lizard.jpg" class="mySlides">
+
+	<a class="button" onclick="plusDivs(-1)">&#10094; back</a>
+	<a class="button" onclick="plusDivs(1)"> forward &#10095;</a>
+
+
+	<script type="text/javascript">
+		var slideIndex = 1;
+		showDivs(slideIndex);
+
+		function plusDivs(n){
+			showDivs(slideIndex+=n);
+		}
+			function showDivs(n){
+				var i;
+				var x= document.getElementsByClassName("mySlides");
+					if (n>x.length){
+						slideIndex=1;
+					}
+					if (n<1){
+						slideIndex=x.length;
+					}
+					for(i=0; i<x.length; i++){
+						x[i].style.display = "none";
+					}
+					x[slideIndex-1].style.display="block";
+			}
+
+	</script>
+</body>
+</html>

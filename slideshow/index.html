@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+		<link rel="stylesheet" type="text/css" href="slideshow.css">
+	<nav></nav>
+</head>
+<body>
+
+	<div class="navbar">
+		<center>
+		<nav> Machine Learning
+		<a href="slideshow2.html">page 2</a>
+		<a href="slideshow3.html">page 3</a>
+		</nav>
+		</center>
+	</div>
+	<br>
+	<center>
+	<img  src="thinkrobot.jpg" class="mySlides">  
+
+	<img  src="robotgrad.jpeg" class="mySlides">
+	
+	<img  src="insidemachine.jpg" class="mySlides">
+	
+	<img  src="machinelearning.jpg" class="mySlides">
+	
+	<img  src="binaryrobot.jpg" class="mySlides">
+
+	<a class="button" onclick="plusDivs(-1)">&#10094; back</a>
+	<a class="button" onclick="plusDivs(1)"> forward &#10095;</a>
+	<div>
+		<ul style="font-size: 33px">
+			<li> machines are being taught how to collect <a href="https://www.wired.com/2016/05/the-end-of-code/">information</a>
+			<li> soon they will do a lot of programming tasks by learning from <a href="https://www.newscientist.com/article/mg23331144-500-ai-learns-to-write-its-own-code-by-stealing-from-other-programs/">existing code</a>
+			<li> we will not have to spend as much <a href="https://hbr.org/2017/05/8-ways-machine-learning-is-improving-companies-work-processes">time</a> looking for solutions to tedious programming issues
+		</ul>
+	</div>	
+	</center>
+	<script type="text/javascript">
+		var slideIndex = 1;
+		showDivs(slideIndex);
+
+		function plusDivs(n){
+			showDivs(slideIndex+=n);
+		}
+			function showDivs(n){
+				var i;
+				var x= document.getElementsByClassName("mySlides");
+					if (n>x.length){
+						slideIndex=1;
+					}
+					if (n<1){
+						slideIndex=x.length;
+					}
+					for(i=0; i<x.length; i++){
+						x[i].style.display = "none";
+					}
+					x[slideIndex-1].style.display="block";
+			}
+
+	</script>
+</body>
+</html>
